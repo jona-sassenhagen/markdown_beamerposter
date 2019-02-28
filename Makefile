@@ -4,6 +4,6 @@ poster:
 	bibtex poster
 	pdflatex --shell-escape poster
 	pdflatex --shell-escape poster
-	rm *.aux *.bbl *.blg *.log *.lua *.out *.nav *.snm *.toc *.vrb *.in
+	rm *.aux *.bbl *.blg *.log *.lua *.out *.nav *.snm *.toc *.vrb *.in poster.tex
 	open poster.pdf
 
