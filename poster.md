@@ -5,13 +5,12 @@
 \usepackage[size=a4,orientation=portrait,scale=1.475]{beamerposter}
 \usetheme{LLT-poster}
 %\usecolortheme{ComingClean}
-\usecolortheme{Entrepreneur}
-%\usecolortheme{orchid}
+%\usecolortheme{Entrepreneur}
+\usecolortheme{orchid}
 %\usecolortheme{rose}
 %\usecolortheme{dove}
 %\usecolortheme{CSIRO}
 %\usecolortheme{crane}
-%\usecolortheme{ConspiciousCreep}  %% VERY garish.
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
