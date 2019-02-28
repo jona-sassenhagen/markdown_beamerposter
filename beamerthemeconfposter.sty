@@ -1,0 +1,104 @@
+%==============================================================================
+% Beamer style for the poster template posted at
+% http://www.nathanieljohnston.com/2009/08/latex-poster-template/
+%
+% Created by the Computational Physics and Biophysics Group at Jacobs University
+% https://teamwork.jacobs-university.de:8443/confluence/display/CoPandBiG/LaTeX+Poster
+% Modified by Nathaniel Johnston (nathaniel@nathanieljohnston.com) in August 2009
+% =============================================================================
+
+\ProvidesPackage{beamerthemeconfposter}
+\RequirePackage{tikz}		% for drawing the nice rounded boxes
+\usetikzlibrary{arrows,backgrounds}
+\RequirePackage[T1]{fontenc}
+%\RequirePackage{lmodern}
+%\usefonttheme{professionalfonts}
+\RequirePackage{textcomp}
+\RequirePackage{amsmath,amssymb}
+\usepackage{exscale}
+\usepackage{ragged2e}
+\usepackage{changepage}
+
+% Spacing before and inside list environments to add white space before lists and between items inside lists
+\makeatletter
+\def\@listi{\leftmargin\leftmarginii
+\topsep 1ex % Spacing before lists
+\parsep 0\p@ \@plus\p@
+\itemsep 6pt} % Spacing between items
+\makeatother
+
+\usecaptiontemplate{\small\structure{\insertcaptionname~\insertcaptionnumber: }\insertcaption} % A fix for figure numbering
+
+%-----------------------------------------------------------
+% Fonts and beamer slide layout
+%-----------------------------------------------------------
+% default for horizontal line
+\setbeamercolor{cboxb}{bg=black}
+\usebeamercolor{block title alerted}
+\setbeamercolor{block body alerted}{bg=block title alerted.fg!10}
+\setbeamercolor{block title alerted}{fg=white,bg=block title alerted.fg} % was gonna swap them (use 2 \setbeamercolor*) but it's black on red :/
+\setbeamercolor{cboxb}{bg=black}
+
+% set the fonts
+\setbeamerfont{section in head/foot}{series=\bfseries}
+\setbeamerfont{block title}{series=\bfseries,size=\huge} % headings.
+\setbeamerfont{frametitle}{series=\bfseries,size=\HUGE} % seems to have no effect. Well, I don't have a frametitle
+
+% set some beamer theme options
+\setbeamertemplate{title page}[default][colsep=-4bp,rounded=true]
+\setbeamertemplate{sections/subsections in toc}[square]
+\setbeamertemplate{items}[circle]
+
+% no nav symbols, sidebar
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{sidebar left}{}
+\setbeamersize{sidebar width left=0pt}
+% set bibliography style
+\setbeamertemplate{bibliography item}[text]
+\setbeamercolor{bibliography item}{fg=black,bg=white}
+\setbeamercolor{bibliography entry author}{fg=black,bg=white}
+\setbeamercolor{bibliography item}{fg=black,bg=white}
+
+
+%==============================================================================
+% build the poster title
+%==============================================================================
+\setbeamertemplate{headline}{
+ \leavevmode
+  \begin{columns}
+   \begin{column}{\linewidth}
+    \vskip1cm
+    \centering
+    \usebeamercolor{title in headline}{\color{fg}\Huge{\textbf{\inserttitle}}\\[0.5ex]}
+    \usebeamercolor{author in headline}{\color{fg}\Large{\insertauthor}\\[1ex]}
+    \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
+    \vskip1cm
+   \end{column}
+   \vspace{1cm}
+  \end{columns}
+ \vspace{0.5in}
+ \hspace{0.5in}\begin{beamercolorbox}[wd=47in,colsep=0.15cm]{cboxb}\end{beamercolorbox}
+ \vspace{0.1in}
+}
+
+% a "sub-block" (plain block-within-block (second-level header))
+\newenvironment{subblock}[1]{
+  \setbeamercolor{block title}{fg=block title.fg!80} % @TODO defer to beamercolortheme
+  \setbeamerfont{block title}{size=\LARGE} % one tick smaller than \huge
+  \begin{block}{#1}
+}{\end{block}}
+
+% white space under blocks
+\addtobeamertemplate{block end}{}{\vspace*{2ex}}
+% alert block (which I'm using as abstract) - add some padding.
+% thanks  http://tex.stackexchange.com/a/109798/13049
+\addtobeamertemplate{block alerted begin}
+  {}
+  {% separates paragraphs in a block (also acts as top padding)
+   \setlength{\parskip}{1em plus 0.5em minus 0.5em}%
+   \begin{adjustwidth}{1em}{1em}
+}
+\addtobeamertemplate{block alerted end}
+  {\end{adjustwidth}%
+   \vspace{2ex plus 0.5ex minus 0.5ex}}% Pads bottom of block
+  {\vspace*{2ex}} % Seperates blocks from each other
