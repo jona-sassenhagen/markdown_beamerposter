@@ -4,13 +4,19 @@
 %% Font sizes can be changed using the scale option.
 \usepackage[size=a4,orientation=portrait,scale=1.475]{beamerposter}
 \usetheme{LLT-poster}
+%\usetheme{RJH}
 %\usecolortheme{ComingClean}
 %\usecolortheme{Entrepreneur}
-\usecolortheme{orchid}
+%\usecolortheme{orchid}
+\usecolortheme{New}
 %\usecolortheme{rose}
 %\usecolortheme{dove}
 %\usecolortheme{CSIRO}
 %\usecolortheme{crane}
+
+%\usetheme{boxes}
+\setbeamertemplate{blocks}[rounded][shadow=false]
+
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -100,7 +106,7 @@
 
 \column{.25\textwidth}
 
-\vspace*{-.75cm}
+\vspace*{-.8cm}
 
 ![pic](figs/theory2.pdf)
 
@@ -124,6 +130,8 @@
 
 \columnsbegin
 
+\hspace{-.75cm}
+
 \column{.55\textwidth}
 
 - Potsdam Sentence Corpus (144 German sentences, with cloze ratings
@@ -145,7 +153,9 @@
 	  (first-level model coefficients) and actual neural activity, and bin
 	  by cloze word
 
-\column{.45\textwidth}
+\column{.425\textwidth}
+
+\vspace{-.35cm}
 
 ![explain](figs/explainmodel.pdf)
 
@@ -189,8 +199,9 @@ to the template
 words, the phonemic model fits less well for predictable compared to
 unpredictable words. (MEG \& EEG; only MEG shown)
 
+\vspace{-.575cm}
 
-![](figs/megres.pdf)
+![](figs/examplemeg.pdf)
 
 \columnsend
 
