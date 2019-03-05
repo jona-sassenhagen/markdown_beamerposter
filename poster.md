@@ -5,14 +5,7 @@
 \usepackage[size=a4,orientation=portrait,scale=1.475]{beamerposter}
 \usetheme{LLT-poster}
 %\usetheme{RJH}
-%\usecolortheme{ComingClean}
-%\usecolortheme{Entrepreneur}
-%\usecolortheme{orchid}
-\usecolortheme{New}
-%\usecolortheme{rose}
-%\usecolortheme{dove}
-%\usecolortheme{CSIRO}
-%\usecolortheme{crane}
+\usecolortheme{NewWhite}
 
 %\usetheme{boxes}
 \setbeamertemplate{blocks}[rounded][shadow=false]
@@ -83,7 +76,7 @@
 
 \hspace{-.75cm}
 
-\column{.6\textwidth}
+\column{.65\textwidth}
 
 **Predictive processing of language is well supported**
 
@@ -110,9 +103,11 @@
 
 \column{.25\textwidth}
 
-\vspace*{-.8cm}
+\vspace*{-.3cm}
 
-![pic](figs/theory2.pdf)
+%![pic](figs/theory2.pdf)
+
+\includegraphics[width=.2125\paperwidth]{figs/theory2.pdf}
 
 \columnsend
 
@@ -134,28 +129,30 @@
 
 \columnsbegin
 
-\hspace{-.75cm}
+%\hspace{-.75cm}
 
 \column{.55\textwidth}
 
-- Potsdam Sentence Corpus (144 German sentences, with cloze ratings
-  for each word;  \cite{Kliegl2004})
-  - MEG (n=25) and EEG (n=35) data
+**Potsdam Sentence Corpus**
 
-- compute strength of phonemic representations
-    - fit a phoneme continuous encoding model \cite{DILIBERTO20152457}
-	  to MEG and EEG data
-	- calculate absolute (cross-validated) residuals per time point and channel
-	  (roughly: how similar is the neural activity induced by each phoneme
-	  token to the idealized template for that phoneme?)
+- 144 German sentences, with cloze ratings for each word \cite{Kliegl2004}
+- MEG (n=25) and EEG (n=35)
 
-- compute correlation between *word* predictability and *phoneme* 
-  representation strength
-    - first approach: fit second-level *cloze* continuous encoding model to
-	  *squared residuals* from first level
-	- second approach: for each word, calculate similarity between template
-	  (first-level model coefficients) and actual neural activity, and bin
-	  by word cloze
+**Compute strength of phonemic representations**
+
+- fit a phoneme continuous encoding model \cite{DILIBERTO20152457}
+  to MEG and EEG data
+- calculate absolute (cross-validated) residuals per time point and channel
+  (roughly: how similar is the neural activity induced by each phoneme
+  token to the idealized template for that phoneme?)
+
+**Correlation *word* predictability vs. *phoneme* representation strength**
+
+- first approach: fit second-level *cloze* continuous encoding model to
+  *squared residuals* from first level
+- second approach: for each word, calculate similarity between template
+  (first-level model coefficients) and actual neural activity, and bin
+  by word cloze
 
 \column{.425\textwidth}
 
