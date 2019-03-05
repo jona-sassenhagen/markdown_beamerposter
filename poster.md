@@ -65,7 +65,7 @@
 
 \author[]{Jona Sassenhagen\textsubscript{1}, Benjamin Gagl\textsubscript{1}, Christian Fiebach\textsubscript{1}}
 \title{Predictive Coding Across Levels of Language}
-\institute{jona.sassenhagen@gmail\ \ \ \ \ \ \ \ \ \textsuperscript{1}Department of Psychology, Goethe University Frankfurt/Main, Germany}
+\institute{sassenha@psych.uni-frankfurt.de\ \ \ \ \ \ \ \ \ \textsuperscript{1}Department of Psychology, Goethe University Frankfurt/Main, Germany}
 % Optional foot image
 \footimage{\includegraphics[width=4.5cm]{figs/funding.pdf}}
 
