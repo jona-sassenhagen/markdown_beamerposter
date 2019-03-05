@@ -155,7 +155,7 @@
 	  *squared residuals* from first level
 	- second approach: for each word, calculate similarity between template
 	  (first-level model coefficients) and actual neural activity, and bin
-	  by cloze word
+	  by word cloze
 
 \column{.425\textwidth}
 
