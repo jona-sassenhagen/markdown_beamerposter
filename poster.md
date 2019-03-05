@@ -152,7 +152,7 @@
 - compute correlation between *word* predictability and *phoneme* 
   representation strength
     - first approach: fit second-level *cloze* continuous encoding model to
-	  *absolute residuals* from first level
+	  *squared residuals* from first level
 	- second approach: for each word, calculate similarity between template
 	  (first-level model coefficients) and actual neural activity, and bin
 	  by cloze word
