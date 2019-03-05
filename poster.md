@@ -81,6 +81,8 @@
 
 \columnsbegin
 
+\hspace{-.75cm}
+
 \column{.6\textwidth}
 
 - Predictive processing of language is well supported
