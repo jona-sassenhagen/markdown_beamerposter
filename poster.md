@@ -67,7 +67,7 @@
 \title{Predictive Coding Across Levels of Language}
 \institute{jona.sassenhagen@gmail\ \ \ \ \ \ \ \ \ \textsuperscript{1}Department of Psychology, Goethe University Frankfurt/Main, Germany}
 % Optional foot image
-\footimage{\includegraphics[width=3cm]{figs/fiebachlablogo.pdf}}
+\footimage{\includegraphics[width=4.5cm]{figs/funding.pdf}}
 
 \begin{document}
 \begin{frame}[fragile]\centering
@@ -87,17 +87,17 @@
 
 **Predictive processing of language is well supported**
 
-    - well known neurocognitive correlates (e.g., N400; \cite{Kutas:2011ty})
-    - ... typically *within* one level: i.e., from word meaning to word meaning
+  - well known neurocognitive correlates (e.g., N400; \cite{Kutas:2011ty})
+  - ... typically *within* one level: i.e., from word meaning to word meaning
 
-**Predictive Coding theory \cite{Clark:2013joa} suggests *hierarchical* predictions
+**Predictive Coding theory \cite{Clark:2013joa} suggests *hierarchical* predictions**
 
-    - e.g., lower levels influenced by higher levels
-      (word *forms* predicted by word *meanings*)
-    - levels play out on different time scales
-    - some previous research has been questioned
-      \cite{nieuwland2017limitsbrief}
-      \cite{Delong:2005jf}
+  - e.g., lower levels influenced by higher levels
+    (word *forms* predicted by word *meanings*)
+  - levels play out on different time scales
+  - some previous research has been questioned
+    \cite{nieuwland2017limitsbrief}
+    \cite{Delong:2005jf}
 	  
 - Predictive coding suggests lower-level (e.g., phonemic) representations should
   be less strong for more higher-level (e.g., semantically) predictable words
