@@ -85,11 +85,13 @@
 
 \column{.6\textwidth}
 
-- Predictive processing of language is well supported
+**Predictive processing of language is well supported**
+
     - well known neurocognitive correlates (e.g., N400; \cite{Kutas:2011ty})
     - ... typically *within* one level: i.e., from word meaning to word meaning
 
-- Predictive Coding theory \cite{Clark:2013joa} suggests *hierarchical* predictions
+**Predictive Coding theory \cite{Clark:2013joa} suggests *hierarchical* predictions
+
     - e.g., lower levels influenced by higher levels
       (word *forms* predicted by word *meanings*)
     - levels play out on different time scales
