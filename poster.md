@@ -8,7 +8,8 @@
 \usecolortheme{NewWhite}
 
 %\usetheme{boxes}
-\setbeamertemplate{blocks}[rounded][shadow=false]
+%\setbeamertemplate{blocks}[rounded][shadow=false]
+\setbeamertemplate{blocks}[]
 
 
 \usepackage[utf8]{inputenc}
@@ -37,6 +38,12 @@
     \Gin@nat@width
   \fi
 }
+
+\newcommand{\vcenteredinclude}[1]{\begingroup
+\setbox0=\hbox{\includegraphics[width=.075\paperwidth]{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
+
 \def\ScaleHeightIfNeeded{%
   \ifdim\Gin@nat@height>0.8\textheight
     0.8\textheight
@@ -57,7 +64,13 @@
 }}
 
 \author[]{Jona Sassenhagen\textsubscript{1}, Benjamin Gagl\textsubscript{1}, Christian Fiebach\textsubscript{1}}
-\title{Predictive Coding Across Levels of Language}
+\title{\hspace{.5cm}Predictive Coding Across Levels of Language
+%vspace{1cm}
+\hfill
+%\includegraphics[width=.075\paperwidth]{figs/gulogo_head.png}
+\vcenteredinclude{figs/gulogo_head.png}
+\vspace{-.315cm}
+}
 \institute{sassenha@psych.uni-frankfurt.de\ \ \ \ \ \ \ \ \ \textsuperscript{1}Department of Psychology, Goethe University Frankfurt/Main, Germany}
 % Optional foot image
 \footimage{\includegraphics[width=4.5cm]{figs/funding.pdf}}
@@ -74,7 +87,7 @@
 
 \columnsbegin
 
-\hspace{-.75cm}
+%\hspace{-.5cm}
 
 \column{.65\textwidth}
 
@@ -129,7 +142,7 @@
 
 \columnsbegin
 
-%\hspace{-.75cm}
+\hspace{.25cm}
 
 \column{.55\textwidth}
 
