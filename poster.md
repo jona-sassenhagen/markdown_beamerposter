@@ -8,8 +8,8 @@
 \usecolortheme{NewWhite}
 
 %\usetheme{boxes}
-%\setbeamertemplate{blocks}[rounded][shadow=false]
-\setbeamertemplate{blocks}[]
+\setbeamertemplate{blocks}[rounded][shadow=false]
+%\setbeamertemplate{blocks}[]
 
 
 \usepackage[utf8]{inputenc}
@@ -43,6 +43,10 @@
 \setbox0=\hbox{\includegraphics[width=.075\paperwidth]{#1}}%
 \parbox{\wd0}{\box0}\endgroup}
 
+\newcommand{\vcenteredincludetwo}[1]{\begingroup
+\setbox0=\hbox{\includegraphics[width=4cm]{#1}}%
+\parbox{\wd0}{\box0}\endgroup}
+
 
 \def\ScaleHeightIfNeeded{%
   \ifdim\Gin@nat@height>0.8\textheight
@@ -64,7 +68,13 @@
 }}
 
 \author[]{Jona Sassenhagen\textsubscript{1}, Benjamin Gagl\textsubscript{1}, Christian Fiebach\textsubscript{1}}
-\title{\hspace{.5cm}Predictive Coding Across Levels of Language
+\title{
+%\hspace{.5cm}
+\hspace{-.25cm}
+%\includegraphics[width=4cm]{figs/funding.pdf}
+\vcenteredincludetwo{figs/funding.pdf}
+\hfill
+Cross-level predictions in language processing
 %vspace{1cm}
 \hfill
 %\includegraphics[width=.075\paperwidth]{figs/gulogo_head.png}
@@ -73,7 +83,9 @@
 }
 \institute{sassenha@psych.uni-frankfurt.de\ \ \ \ \ \ \ \ \ \textsuperscript{1}Department of Psychology, Goethe University Frankfurt/Main, Germany}
 % Optional foot image
-\footimage{\includegraphics[width=4.5cm]{figs/funding.pdf}}
+\footimage{
+%\includegraphics[width=4.5cm]{figs/funding.pdf}
+}
 
 \begin{document}
 \begin{frame}[fragile]\centering
@@ -98,15 +110,14 @@
 
 **Predictive Coding theory \cite{Clark:2013joa} suggests *hierarchical* predictions**
 
-  - e.g., lower levels influenced by higher levels
-    (word *forms* predicted by word *meanings*)
+  - lower levels influenced by higher levels
+    (e.g., word *forms* predicted by word *meanings*)
   - levels play out on different time scales
-  - some previous research has been questioned
-    \cite{nieuwland2017limitsbrief}
-    \cite{Delong:2005jf}
-	  
-- Predictive coding suggests lower-level (e.g., phonemic) representations should
-  be less strong for more higher-level (e.g., semantically) predictable words
+  - initial support for these questions \cite{Delong:2005jf}
+    has been questioned \cite{nieuwland2017limitsbrief}
+  - **Hypothesis**: Predictive coding suggests lower-level (e.g., phonemic)
+    representations should be less strong for more higher-level (e.g.,
+	semantically) predictable words
 
 **References**
 
@@ -118,9 +129,7 @@
 
 \vspace*{-.3cm}
 
-%![pic](figs/theory2.pdf)
-
-\includegraphics[width=.2125\paperwidth]{figs/theory2.pdf}
+\includegraphics[width=.2125\paperwidth]{figs/theory_brain.pdf}
 
 \columnsend
 
@@ -153,19 +162,19 @@
 
 **Compute strength of phonemic representations**
 
-- fit a phoneme continuous encoding model \cite{DILIBERTO20152457}
-  to MEG and EEG data
+- fit continuous phoneme encoding model/mTRF \cite{DILIBERTO20152457}
+  to MEG/EEG data
 - calculate absolute (cross-validated) residuals per time point and channel
   (roughly: how similar is the neural activity induced by each phoneme
   token to the idealized template for that phoneme?)
 
 **Correlation *word* predictability vs. *phoneme* representation strength**
 
-- first approach: fit second-level *cloze* continuous encoding model to
-  *squared residuals* from first level
-- second approach: for each word, calculate similarity between template
+- first approach: for each word, calculate similarity between template
   (first-level model coefficients) and actual neural activity, and bin
   by word cloze
+- second approach: fit second-level *word cloze* continuous encoding model to
+  *squared residuals* from first level ($RSS \sim cloze$)
 
 \column{.425\textwidth}
 
@@ -210,8 +219,8 @@ to the template
 
 **Approach 2:** Regression coefficients from second level
 (cloze on phonemic encoding residual) encoding indicate at the beginning of
-words, the phonemic model fits less well for predictable compared to
-unpredictable words. (MEG \& EEG; only MEG shown)
+words (~180ms), the phonemic model fits less well for predictable compared to
+unpredictable words. (MEG \& EEG; only MEG shown, EEG is highly similar)
 
 \vspace{-.575cm}
 
@@ -223,7 +232,8 @@ unpredictable words. (MEG \& EEG; only MEG shown)
 
 **Discussion** Results are in accordance with the hierarchical version of Predictive Coding
 theory: when processing continuous, congruent speech, phoneme-level
-representational pattern strength covaries with word-level predictability.
+representational pattern strength (in pTSG) covaries with word-level
+predictability - as if predicted phonemes are "predicted away".
 
 \columnsend
 
