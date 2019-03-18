@@ -67,7 +67,7 @@
  horizontalRule = {\end{block}}
 }}
 
-\author[]{Jona Sassenhagen\textsubscript{1}, Benjamin Gagl\textsubscript{1}, Christian Fiebach\textsubscript{1}}
+\author[]{Jona Sassenhagen\textsuperscript{1}, Benjamin Gagl\textsuperscript{1}, Christian J. Fiebach\textsuperscript{1,2}}
 \title{
 %\hspace{.5cm}
 \hspace{-.25cm}
@@ -81,7 +81,7 @@ Cross-level predictions in language processing
 \vcenteredinclude{figs/gulogo_head.png}
 \vspace{-.315cm}
 }
-\institute{sassenha@psych.uni-frankfurt.de\ \ \ \ \ \ \ \ \ \textsuperscript{1}Department of Psychology, Goethe University Frankfurt/Main, Germany}
+\institute{sassenha@psych.uni-frankfurt.de\ \ \ \ \ \ \ \ \ \textsuperscript{1}Department of Psychology \& \textsuperscript{2}Brain Imaging Center; Goethe-University Frankfurt/Main, Germany}
 % Optional foot image
 \footimage{
 %\includegraphics[width=4.5cm]{figs/funding.pdf}
